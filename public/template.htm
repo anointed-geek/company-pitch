@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Conference Demo</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .meeting-agenda, .action-items {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 0px;
+        }
+        .meeting-agenda h4, .action-items h4 {
+            margin-bottom: 20px;
+        }
+        .video-conference img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .video-conference {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .video-conference .col-6 {
+            padding: 5px;
+        }
+        .end-call-btn, .title {
+            margin: 5px 0;
+        }
+        .objective-complete {
+            text-decoration: line-through;
+            padding-right: 30px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="text-left">
+            <div class="col-8"></div><div class="title">...</div></div>
+            <div class="col-8"></div><button class="btn btn-danger end-call-btn" onclick="document.location='index.htm'">End Call</button></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 video-conference">
+            <div class="col-8">
+                <img src="https://via.placeholder.com/300" alt="Participant 1">
+            </div>
+            <div class="col-4">
+                <img src="https://via.placeholder.com/300" alt="Participant 2">
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="meeting-agenda">
+                <h4>Agenda</h4>
+                <ul class="list-unstyled">
+                    <li><strong class="objective-complete">1. Introduction</strong><br>10:00 AM - 10:15 AM<br>Brief overview of the meeting objectives and participants.</li>
+                    <li><strong>2. Project Updates</strong><br>10:15 AM - 10:45 AM<br>Updates on the current project status and next steps.</li>
+                    <li><strong>3. Q&A Session</strong><br>10:45 AM - 11:00 AM<br>Open floor for questions and answers.</li>
+                    <li><strong>4. Closing Remarks</strong><br>11:00 AM - 11:15 AM<br>Summary of the meeting and final thoughts.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-5">
+            <div class="action-items">
+                <h4>Actions</h4>
+                <form>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Enter action item">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button">Add</button>
+                        </div>
+                    </div>
+                </form>
+                <ul class="list-unstyled">
+                    <li><input type="checkbox"> Prepare project update slides - <strong>Emma Johnson</strong></li>
+                    <li><input type="checkbox"> Send meeting summary to all participants - <strong>Michael Smith</strong></li>
+                    <li><input type="checkbox"> Follow up with the design team - <strong>Olivia Brown</strong></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
