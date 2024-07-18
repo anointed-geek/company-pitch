@@ -26,6 +26,10 @@
             width: 100%;
             margin-bottom: 10px;
         }
+        .required-label::after {
+            content: " *";
+            color: red;
+        }
     </style>
 </head>
 <body>
@@ -34,6 +38,18 @@
         <h2 class="text-center">Create a Session</h2>
         <form action="template.htm">
             <input type="hidden" name="session_id" id="session_id" value="" />
+            <input type="hidden" name="delighted" id="delighted" value="test" />
+            
+            <div class="form-group">
+                <label for="name" title="Name" class="required-label">Name</label>
+                <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name" value="" required />
+            </div>
+
+            <div class="form-group">
+                <label for="email" title="Email" class="required-label">Email</label>
+                <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email" value="" required />
+            </div>
+
             <button type="submit" class="btn btn-success btn-block">Create Session</button>
         </form>
     </div>
@@ -43,7 +59,7 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
-    document.querySelector("session_id").value = uuidv4();
+    document.querySelector("#session_id").value = uuidv4();
 </script>
 </body>
 </html>
